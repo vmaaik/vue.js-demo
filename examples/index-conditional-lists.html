@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditionals</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<div id="app">
+    <p v-if="show">You can see this</p>
+    <p v-else>Now you see me</p>
+    <p>Do you also see me?</p>
+    <template v-if="show">
+        <h1>Michal Gebarowski</h1>
+        <h2>Michal Gebarowski</h2>
+        <p>Inside the template</p>
+    </template>
+    <button @click="show= !show">Switch</button>
+</div>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            show: true
+        }
+    })
+</script>
