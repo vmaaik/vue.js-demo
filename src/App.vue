@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!--<app-servers></app-servers>-->
-    <server-dashboard></server-dashboard>
+    <!--<server-dashboard></server-dashboard>-->
+    <user></user>
   </div>
 </template>
 

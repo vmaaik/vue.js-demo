@@ -21,3 +21,9 @@ export default {} - contains the business logic, it is used as a vue instance so
 - template in component must have only one root element, all elements must be wrapped into single div
 - data inside the component must be a function
 - to register component globally it's necessary to add it to main.js -> Vue.component(<component-name>, <name>.vue) and import it ro main.js file
+- component name can have various versions, the classic one is 'my-component': Component
+
+#### Styles 
+
+- all styles from each and every component are added to the header
+- to apply styles locally style has to have scoped in tag

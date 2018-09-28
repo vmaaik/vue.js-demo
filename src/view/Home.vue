@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-server-status v-for="server in 5"></app-server-status>
+    <ServerStatus v-for="server in 5"></ServerStatus>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 
   export default {
     components: {
-      'app-server-status': ServerStatus
+      ServerStatus
     }
   }
 </script>
