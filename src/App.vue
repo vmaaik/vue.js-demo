@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <app-servers></app-servers>
+    <!--<app-servers></app-servers>-->
+    <server-dashboard></server-dashboard>
   </div>
 </template>
 
