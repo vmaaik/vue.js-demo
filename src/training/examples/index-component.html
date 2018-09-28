@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lists</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <my-cmp></my-cmp>
+
+  <my-cmp></my-cmp>
+
+  <my-cmp></my-cmp>
+</div>
+
+
+</body>
+</html>
+
+<script>
+  Vue.component('my-cmp', {
+    data: function () {
+      return {
+        status: "Critical"
+      }
+    },
+    template: '<p> Server Status {{ status}}</p>',
+  })
+
+  new Vue({
+    el: '#app'
+  })
+</script>
