@@ -1,8 +1,9 @@
 <template>
   <div class="component">
     <h3>User Details </h3>
-    <p>Name: {{ name }} </p>
+    <p>Name: {{ childName }} </p>
     <p>Reverse: {{ switchName() }} </p>
+    <button @click="resetName">Reset</button>
 
   </div>
 </template>
@@ -11,7 +12,7 @@
 
   export default {
     props: {
-      name: {
+      childName: {
         type: String,
         required: true,
         // default: "Michal"
@@ -19,7 +20,11 @@
     },
     methods: {
       switchName() {
-        return this.name.split("").reverse().join("");
+        return this.childName.split("").reverse().join("");
+      },
+
+      resetName() {
+        return this.childName = "XXXXXX"
       }
     }
   }
@@ -30,3 +35,4 @@
     background-color: lightcoral;
   }
 </style>
+*
