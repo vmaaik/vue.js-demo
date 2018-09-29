@@ -22,8 +22,11 @@ export default {} - contains the business logic, it is used as a vue instance so
 - data inside the component must be a function
 - to register component globally it's necessary to add it to main.js -> Vue.component(<component-name>, <name>.vue) and import it ro main.js file
 - component name can have various versions, the classic one is 'my-component': Component
+- use props[] to bind/pass values from parent component to child component
 
 #### Styles 
 
 - all styles from each and every component are added to the header
 - to apply styles locally style has to have scoped in tag
+
+

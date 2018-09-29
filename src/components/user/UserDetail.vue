@@ -1,11 +1,28 @@
 <template>
   <div class="component">
-    <h3>You may view the User Details here</h3>
-    <p>Many Details</p>
+    <h3>User Details </h3>
+    <p>Name: {{ name }} </p>
+    <p>Reverse: {{ switchName() }} </p>
+
   </div>
 </template>
 
 <script>
+
+  export default {
+    props: {
+      name: {
+        type: String,
+        required: true,
+        // default: "Michal"
+      }
+    },
+    methods: {
+      switchName() {
+        return this.name.split("").reverse().join("");
+      }
+    }
+  }
 </script>
 
 <style scoped>
