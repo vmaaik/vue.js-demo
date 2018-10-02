@@ -3,7 +3,8 @@
     <!--<app-servers></app-servers>-->
     <!--<server-dashboard></server-dashboard>-->
     <!--<user></user>-->
-    <rest></rest>
+    <!--<rest></rest>-->
+    <vuex-demo></vuex-demo>
   </div>
 </template>
 
