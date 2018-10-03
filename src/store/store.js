@@ -7,7 +7,8 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   // all the properties application has
   state: {
-    counter: 0
+    counter: 0,
+    hello: ''
   },
 
   getters: {
@@ -26,6 +27,28 @@ export const store = new Vuex.Store({
 
     decrement: state => {
       state.counter--;
+    },
+
+    actions: {
+      increment: ({commit}) => {
+        commit('increment');
+      },
+      decrement: ({commit}) => {
+        commit('decrement');
+      },
+
+      asyncIncrement: ({commit}) => {
+        setTimeout(() => {
+          commit('increment');
+        }, 1000)
+      },
+
+      asyncDecrement: ({commit}) => {
+        setTimeout(() => {
+          commit('decrement');
+        }, 1000)
+      },
+
     }
   }
 });

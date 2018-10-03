@@ -2,6 +2,7 @@
   <div>
     <button class="btn btn-primary" @click="increment">Increment</button>
     <button class="btn btn-primary" @click="decrement">Decrement</button>
+    <button @click="hello">Click</button>
   </div>
 </template>
 
@@ -12,7 +13,8 @@
     methods: {
       ...mapMutations([
         'increment',
-        'decrement'
+        'decrement',
+        'hello'
       ])
     }
   }
