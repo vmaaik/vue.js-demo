@@ -11,25 +11,29 @@
 <div id="app">
   <section class="row">
     <div class="small-6 columns">
-      <h1 class="text-center">YOU</h1>
+      <h1 class="text-center">PLAYER 1</h1>
       <div class="healthbar">
-        <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
-
+        <div class="healthbar text-center"
+             style="background-color: green; margin: 0; color: white;"
+             :style="{ width: player1.health + '%' }">
+          {{player1.health}}
         </div>
       </div>
     </div>
     <div class="small-6 columns">
-      <h1 class="text-center">RAMBO</h1>
+      <h1 class="text-center">PLAYER 2</h1>
       <div class="healthbar">
-        <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
-
+        <div class="healthbar text-center"
+             style="background-color: green; margin: 0; color: white;">
+          :style="{ width: player2.health + '%' }">
+          {{player2.health}}
         </div>
       </div>
     </div>
   </section>
   <section class="row controls">
     <div class="small-12 columns">
-      <button id="start-game" @onclick="startGame">START NEW GAME</button>
+      <button id="start-game" @click="startGame">START NEW GAME</button>
     </div>
   </section>
   <section :hidden="isPanelHidden" class="row controls">
@@ -53,20 +57,4 @@
 </body>
 </html>
 
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      isPanelHidden: true
-    },
-    methods: {
-      startGame: () => {
-        if (this.isPanelHidden) {
-          this.isPanelHidden = false;
-        }
-      }
-    }
-  })
-
-
-</script>
+<script src="app.js"></script>
