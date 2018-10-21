@@ -21,12 +21,12 @@
       </div>
     </div>
     <div class="small-6 columns">
-      <h1 class="text-center">PLAYER 2</h1>
+      <h1 class="text-center">MONSTER</h1>
       <div class="healthbar">
         <div class="healthbar text-center"
              style="background-color: green; margin: 0; color: white;"
-             :style="{ width: rambo.health + '%' }">
-          {{rambo.health}}
+             :style="{ width: monster.health + '%' }">
+          {{monster.health}}
         </div>
       </div>
     </div>
@@ -47,7 +47,8 @@
   <section class="row log" v-if="logs.length > 0">
     <div class="small-12 columns">
       <ul>
-        <li v-for="log in logs">
+        <li v-for="log in logs"
+            :class="{'player-turn': log.isPlayer, 'monster-turn': !log.isPlayer}">
           <div>{{log.text}}</div>
         </li>
       </ul>

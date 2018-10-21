@@ -7,7 +7,7 @@ new Vue({
       health: 78
     },
 
-    rambo: {
+    monster: {
       health: 100
     }
   },
@@ -15,33 +15,40 @@ new Vue({
     startGame() {
       this.isGameStarted = true;
       this.player1.health = 100;
-      this.rambo.health = 100;
+      this.monster.health = 100;
     },
     attack() {
       let monsterAttack = this.genRandomBarValue(false);
       let playerAttack = this.genRandomBarValue(false);
       this.player1.health -= monsterAttack;
-      this.rambo.health -= playerAttack;
-      this.generateLog(true, playerAttack, "PLAYER HITS MONSTER FOR");
-      this.generateLog(false, monsterAttack, "MONSTER HITS PLAYER FOR");
+      this.monster.health -= playerAttack;
+      this.generateLog(true, playerAttack, "MONSTER - ");
+      this.generateLog(false, monsterAttack, "PLAYER - ");
       this.checkResult;
     },
     specialAttack() {
       let monsterAttack = this.genRandomBarValue(false);
       let playerAttack = this.genRandomBarValue(false);
       this.player1.health -= monsterAttack;
-      this.rambo.health -= playerAttack;
+      this.monster.health -= playerAttack;
+      this.generateLog(true, playerAttack, "SPECIAL ATTACK! MONSTER - ");
+      this.generateLog(false, monsterAttack, "SPECIAL ATTACK! PLAYER - ");
       this.checkResult;
-      this.generateLog(true, playerAttack, "PLAYER HITS MONSTER FOR");
-      this.generateLog(false, monsterAttack, "MONSTER HITS PLAYER FOR");
+
     },
     heal() {
-      if (this.player1.health <= 90) {
-        this.player1.health += 10;
-        this.generateLog(true, 10, "")
-      }
-      else {
-        this.player1.health = 100;
+      if (this.player1.health <= 99) {
+        if (this.player1.health <= 90) {
+          this.player1.health += 10;
+          this.player1.health -= this.genRandomBarValue(false);
+          this.generateLog(true, 10, "RECOVERY MODE! PLAYER + ")
+        }
+        else {
+          let recovery = 100 - this.player1.health;
+          this.generateLog(true, recovery, "RECOVERY MODE! PLAYER + ");
+          this.player1.health -= this.genRandomBarValue(false);
+          this.player1.health = 100;
+        }
       }
     },
     giveUp() {
@@ -69,7 +76,7 @@ new Vue({
 
   computed: {
     checkResult() {
-      if (this.rambo.health <= 0) {
+      if (this.monster.health <= 0) {
         this.startGame();
         alert('You win!')
       } else if (this.player1.health <= 0) {
