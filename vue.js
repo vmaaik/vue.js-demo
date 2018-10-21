@@ -4410,7 +4410,7 @@
     }
   }
 
-// transform component v-model info (value and callback) into
+// transform component v-model logs (value and callback) into
 // prop and event handler respectively.
   function transformModel(options, data) {
     var prop = (options.model && options.model.prop) || 'value';
@@ -8773,7 +8773,7 @@
           "development" !== 'test' &&
           isChrome
         ) {
-          console[console.info ? 'info' : 'log'](
+          console[console.logs ? 'info' : 'log'](
             'Download the Vue Devtools extension for a better development experience:\n' +
             'https://github.com/vuejs/vue-devtools'
           );
@@ -8784,7 +8784,7 @@
         config.productionTip !== false &&
         typeof console !== 'undefined'
       ) {
-        console[console.info ? 'info' : 'log'](
+        console[console.logs ? 'info' : 'log'](
           "You are running Vue in development mode.\n" +
           "Make sure to turn on production mode when deploying for production.\n" +
           "See more tips at https://vuejs.org/guide/deployment.html"
@@ -10526,7 +10526,7 @@
       state.warn(
         "<" + (el.tag) + " v-for=\"" + alias + " in " + exp + "\">: component lists rendered with " +
         "v-for should have explicit keys. " +
-        "See https://vuejs.org/guide/list.html#key for more info.",
+        "See https://vuejs.org/guide/list.html#key for more logs.",
         true /* tip */
       );
     }
