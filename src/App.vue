@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <!--<app-servers></app-servers>-->
-    <!--<server-dashboard></server-dashboard>-->
-    <!--<user></user>-->
-    <!--<rest></rest>-->
-    <vuex-demo></vuex-demo>
+    <Footer/>
   </div>
 </template>
 
 <script>
-  export default {}
+  import Footer from './components/dashboard/MyFooter.vue'
+  export default {
+    components: {
+      Footer,
+    }
+  }
 </script>
 <style></style>
