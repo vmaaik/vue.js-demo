@@ -1,15 +1,14 @@
 <template>
   <div id="app">
-    <Footer/>
+    <FiltersAndMixins/>
   </div>
 </template>
 
 <script>
-  import Footer from './components/dashboard/MyFooter.vue'
+  import FiltersAndMixins from './view/FiltersAndMixins.vue';
   export default {
     components: {
-      Footer,
+      FiltersAndMixins,
     }
   }
 </script>
-<style></style>

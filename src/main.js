@@ -13,6 +13,10 @@ Vue.component('user', UserView);
 Vue.component('rest', RestAPI);
 Vue.component('vuex-demo', VuexDemo);
 
+Vue.filter('to-lowercase', function (value) {
+  return value.toLowerCase();
+});
+
 new Vue({
   el: '#app',
   store,

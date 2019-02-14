@@ -29,4 +29,12 @@ export default {} - contains the business logic, it is used as a vue instance so
 - all styles from each and every component are added to the header
 - to apply styles locally style has to have scoped in tag
 
+#### Filters and Mixins 
+
+- filters only transform the value in the template not the data itself 
+- filters always take value as a parameter 
+- filters can be registered globally 
+- better alternatives for filters are computed properties 
+
+
 
