@@ -36,5 +36,8 @@ export default {} - contains the business logic, it is used as a vue instance so
 - filters can be registered globally 
 - better alternatives for filters are computed properties 
 
-
+- vue is merging the data objects in mixins and components
+- life cycle hooks in mixins (https://alligator.io/vuejs/component-lifecycle/) are initialized first before component hooks. Component always can overwrite changes provided by mixins.
+- global mixins can be added but should be used cautiously as they affect every single component. 
+In other words, Vue.js creates a copy of mixin once imported to component
 

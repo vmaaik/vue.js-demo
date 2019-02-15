@@ -15,13 +15,12 @@
 </template>
 
 <script>
+import {mixin} from "./mixin";
 
-  export default {
+export default {
     data(){
       return{
         text: 'hello',
-        fruits: ['mango', 'banana', 'melon'],
-        filterText: '',
       }
     },
     filters:{
@@ -29,14 +28,7 @@
         return value.toUpperCase();
       }
     },
-
-    computed:{
-      filteredFruits(){
-        return this.fruits.filter((elem)=> {
-          return elem.match(this.filterText);
-        })
-      }
-    }
+  mixins: [mixin],
   }
 </script>
 
