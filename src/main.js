@@ -16,9 +16,12 @@ Vue.component('vuex-demo', VuexDemo);
 Vue.filter('to-lowercase', function (value) {
   return value.toLowerCase();
 });
+Vue.filter('CountLength', (value) => {
+  return value + "(" + value.length + ")";
+});
 
 new Vue({
   el: '#app',
   store,
   render: h => h(App)
-})
+});
