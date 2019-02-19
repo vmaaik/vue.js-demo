@@ -41,3 +41,10 @@ export default {} - contains the business logic, it is used as a vue instance so
 - global mixins can be added but should be used cautiously as they affect every single component. 
 In other words, Vue.js creates a copy of mixin once imported to component
 
+
+#### Animations
+
+- in order to do any animations vue provide us with <transition>,
+- transition can only be used on a single element
+-  .*-enter - this class is attached only for one frame in the beginning, initial state,
+- .*-enter-active - class to set up transition, 
