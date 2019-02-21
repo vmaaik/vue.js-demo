@@ -48,3 +48,4 @@ In other words, Vue.js creates a copy of mixin once imported to component
 - transition can only be used on a single element
 -  .*-enter - this class is attached only for one frame in the beginning, initial state,
 - .*-enter-active - class to set up transition, 
+- .*-leave - default position for leaving, 
