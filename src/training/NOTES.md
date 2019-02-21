@@ -46,6 +46,9 @@ In other words, Vue.js creates a copy of mixin once imported to component
 
 - in order to do any animations vue provide us with <transition>,
 - transition can only be used on a single element
--  .*-enter - this class is attached only for one frame in the beginning, initial state,
+- .*-enter - this class is attached only for one frame in the beginning, initial state,
 - .*-enter-active - class to set up transition, 
 - .*-leave - default position for leaving, 
+- if animation and transition are mixed in css then type should be set up to make sure which one dictates the length,
+- v-show or v-if can be used to animate the content,
+- appear allows animate the element when the page is loaded first, 
