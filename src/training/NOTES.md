@@ -52,3 +52,5 @@ In other words, Vue.js creates a copy of mixin once imported to component
 - if animation and transition are mixed in css then type should be set up to make sure which one dictates the length,
 - v-show or v-if can be used to animate the content,
 - appear allows animate the element when the page is loaded first, 
+- animate.css library uses the same name attribute in transition as vue. To solve the problem there is an option to add additional
+parameters for all clasess like enter-class and so on. 
